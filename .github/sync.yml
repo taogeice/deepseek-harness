@@ -24,9 +24,9 @@ jobs:
         id: sync
         uses: aormsby/Fork-Sync-With-Upstream-action@v3.4
         with:
-          upstream_sync_repo: 上游所有者/仓库名   # 必填，需替换！
-          upstream_sync_branch: main              # 上游要同步的分支
-          target_sync_branch: main                # 你的目标分支
+          upstream_sync_repo: deepseek-ai/deepseek-harness   # 上游官方仓库
+          upstream_sync_branch: main                          # 上游使用 main 分支
+          target_sync_branch: master                          # 你的仓库使用 master 分支
           target_repo_token: ${{ secrets.GITHUB_TOKEN }} # 自动生成，无需设置
 
           # 测试模式：设为 true 则仅测试，不实际推送
